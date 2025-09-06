@@ -109,6 +109,7 @@ export const useAnalytics = () => {
             ).padStart(2, "0")}`;
             const monthName = month.toLocaleString("ar-SA", {
               month: "long",
+              calendar: "gregory",
             });
 
             if (!acc[monthKey]) {

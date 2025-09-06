@@ -51,7 +51,7 @@ export function YearlyChart() {
       </CardHeader>
       <CardContent>
         <ChartContainer
-          className="my-7 w-[160px] h-80 sm:w-full sm:h-full"
+          className="my-7 w-w-full h-80 sm:h-full"
           config={chartConfig}
         >
           <AreaChart
