@@ -14,6 +14,7 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import ProtectedLayout from "./layouts/ProtectedLayout";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import AuthConfirm from "./pages/AuthConfirm";
 
 function App() {
   const client = new QueryClient();
@@ -26,7 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/auth" element={<Auth />} />
-
+            <Route path="/auth/confirm" element={<AuthConfirm />} />
             <Route element={<ProtectedLayout />}>
               <Route element={<DashboardLayout />}>
                 <Route path="/home" element={<Home />} />
