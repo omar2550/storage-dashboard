@@ -80,6 +80,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     name: string,
     company: string
   ) => {
+    const redirectUrl =
+      "https://storage-dashboard-murex.vercel.app/auth/confirm";
     const { error } = await supabase.auth.signUp({
       email,
       password,
@@ -88,6 +90,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           name,
           company,
         },
+        emailRedirectTo: redirectUrl,
       },
     });
 
